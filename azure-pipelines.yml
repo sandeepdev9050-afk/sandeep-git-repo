@@ -12,7 +12,7 @@ steps:
   inputs:
     provider: 'azurerm'
     command: 'init'
-    workingDirectory: '$(System.DefaultWorkingDirectory)/sandeep-git-repo'
+    workingDirectory: '$(System.DefaultWorkingDirectory)/main'
     backendServiceArm: 'Demo-Service Connection'
     backendAzureRmResourceGroupName: 'demo-rg'
     backendAzureRmStorageAccountName: 'demosstg123'
@@ -23,12 +23,12 @@ steps:
   inputs:
     provider: 'azurerm'
     command: 'plan'
-    workingDirectory: '$(System.DefaultWorkingDirectory)/sandeep-git-repo'
+    workingDirectory: '$(System.DefaultWorkingDirectory)/main'
     environmentServiceNameAzureRM: 'Demo-Service Connection'
 
 - task: TerraformTask@5
   inputs:
     provider: 'azurerm'
     command: 'apply'
-    workingDirectory: '$(System.DefaultWorkingDirectory)/sandeep-git-repo'
+    workingDirectory: '$(System.DefaultWorkingDirectory)/main'
     environmentServiceNameAzureRM: 'Demo-Service Connection'
