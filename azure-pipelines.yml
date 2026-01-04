@@ -4,6 +4,9 @@ pool: 2026-pool
 
 steps:
 
+- script: |
+    echo "Default working dir:"
+
 - task: TerraformTask@5
   inputs:
     provider: 'azurerm'
