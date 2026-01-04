@@ -12,7 +12,7 @@ steps:
   inputs:
     provider: 'azurerm'
     command: 'init'
-    workingDirectory: '$(System.DefaultWorkingDirectory)/sandeep-git-repo'
+    workingDirectory: '$(System.DefaultWorkingDirectory)'
     backendServiceArm: 'Demo-Service Connection'
     backendAzureRmResourceGroupName: 'demo-rg'
     backendAzureRmStorageAccountName: 'demosstg123'
