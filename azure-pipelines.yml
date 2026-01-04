@@ -6,6 +6,7 @@ steps:
 
 - script: |
     echo "Default working dir:"
+    echo $(System.DefaultWorkingDirectory)
 
 - task: TerraformTask@5
   inputs:
